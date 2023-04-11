@@ -1,0 +1,78 @@
+<html>
+    <head>
+    <style>
+        div{
+            display: inline-flex;
+        }
+    </style>
+    <script>
+        var itemlist = []
+        function getitem() {
+            data = "";
+            itemlist.map((name, index) => {
+                data = data + "<tr>";
+                data = data + "<td>" + index + "</td>";
+                data = data + "<td>" + name.name + "</td>";
+                data = data + "<td>" + name.price + "</td>";
+                data = data + "<td>" + name.qty + "</td>";
+                data = data + "<td>" + name.qty * name.price + "</td>";
+                data = data + "<td><button onclick='del(" + index + ")'>Delete</button></td>";
+                data = data + "</tr>";
+    
+            })
+            document.getElementById('container').innerHTML = data;
+        }
+        function save() {
+            var iname = document.getElementById("iname").value;
+            var iprice = document.getElementById("iprice").value;
+            var iqty = document.getElementById("iqty").value;
+            var newitem = { name: iname, price: iprice, qty: iqty }
+            itemlist = itemlist.concat(newitem);
+            getitem();// reload the list after adding the item
+            document.getElementById("iname").value = "";
+            document.getElementById("iprice").value = "";
+            document.getElementById("iqty").value = "";
+        }
+        function del(index) {
+            itemlist.splice(index, 1)
+            getitem()
+        }
+    </script>
+</head>
+<body onload="getitem()">
+    <div>
+        <table width="400" cellpadding="10px">
+            <tr>
+                <td align="center"><input type="text" id="iname" placeholder="Item Name"/></td>
+            </tr>
+            <tr>
+                <td align="center"><input type="text" id="iprice" placeholder="Price"/></td>
+            </tr>
+            <tr>
+                <td align="center"><input type="text" id="iqty" placeholder="Quantity"/></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button onclick="save()"> Save</button></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table width="800" border="1px" cellpadding="10px" align="center">
+            <thead>
+                <tr>
+                    <th>SI No</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="container">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

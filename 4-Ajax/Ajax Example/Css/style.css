@@ -1,0 +1,109 @@
+body{
+	font-family:roboto;
+}
+.header{
+	background-color:blue;
+}
+.navbar-default {
+    background-color: blue;
+    border: 0px;
+    padding: 20px 0 20px 0;
+}
+.glyphicon-search{
+    color: white;
+    font-size: 30px;
+}
+.navbar-nav {
+    float: left;
+    margin: 15px 0 0 70px;
+}
+span{
+    color: white;
+    font-size: 15px;
+    padding-left: 20px;
+}
+.container-fluid {
+    padding-left: 100px;
+}
+.navbar-default .navbar-form {
+    margin-left: 20%;
+}
+.btn-default {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+}
+
+/* section-1 */
+.section-1{
+	margin:50px;
+}
+.feature-card1{
+	border:1px solid #ddd;
+	margin:10px 0;
+    text-align:center;
+    background-color: blue;
+}
+.feature-card2{
+	border:1px solid #ddd;
+	margin:10px 0;
+    text-align:center;
+    background-color: orange;
+}
+.feature-card3{
+	border:1px solid #ddd;
+	margin:10px 0;
+    text-align:center;
+    background-color: green;
+}
+.feature-card4{
+	border:1px solid #ddd;
+	margin:10px 0;
+    text-align:center;
+    background-color: purple;
+}
+.feature-card5{
+	border:1px solid #ddd;
+	margin:10px 0;
+    text-align:center;
+    background-color: red;
+}
+.glyphicon-blackboard{
+    font-size: 70px;
+    padding: 15px;
+}
+.glyphicon-headphones{
+    font-size: 70px;
+    padding: 15px;
+}
+.glyphicon-th-list{
+    font-size: 70px;
+    padding: 15px;
+}
+.glyphicon-cog{
+    font-size: 70px;
+    padding: 15px;
+}
+.glyphicon-plane{
+    font-size: 70px;
+    padding: 15px;
+}
+.glyphicon-gbp{
+    font-size: 70px;
+    padding: 15px;
+}
+.glyphicon-pencil{
+    font-size: 70px;
+    padding: 15px;
+}
+.glyphicon-th-large{
+    font-size: 70px;
+    padding: 15px;
+}
+.feature-card:hover{
+	border:1px solid #cc3333;
+	box-shadow:0px 5px 20px 1px #000;
+}
+h3{
+    color: white;
+}

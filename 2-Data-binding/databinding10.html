@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function one(){
+                var user = {
+                    fullname:"Ganesh",
+                    mobile:9999999999,
+                    city:"Bangalore",
+                    edu:"MCA",
+                    age:"30 Years",
+                    exp:"10 Years"
+                };
+                var data = "<h2>" + user.fullname + "</h2>";
+                    data += "<p>" + user.age + "</p>";
+                    data += "<p>" + user.edu + "</p>";
+                    data += "<p>" + user.exp + "</p>";
+                    data += "<p>" + user.city + "</p>";
+                    data += "<p>" + user.mobile + "</p>";
+                document.getElementById("info").innerHTML = data;
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Object Example</h1>
+        <button onclick="one()"> Get Details </button>
+        <br/><br/>
+        <div id="info"></div>
+    </body>
+</html>

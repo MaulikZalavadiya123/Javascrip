@@ -1,0 +1,20 @@
+{
+    "companylist": [
+      {
+        "id": 1,
+        "name": "TATA"
+      },
+      {
+        "id": 2,
+        "name": "SAMSUNG"
+      },
+      {
+        "id": 3,
+        "name": "APPLE"
+      },
+      {
+        "id": 4,
+        "name": "BATA"
+      }
+    ]
+  }

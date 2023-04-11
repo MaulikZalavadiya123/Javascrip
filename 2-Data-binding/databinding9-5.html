@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+            section{
+                display: grid;
+                width: 80%;
+                margin: auto;
+                grid-template-columns: auto auto;
+                background-color: lightyellow;
+                padding: 20px;
+            }
+
+            h2{
+                margin: 0 10px 0 10px;
+                padding: 10px;
+                text-align: center;
+                background-color: royalblue;
+                color: white;
+                margin-top: 10px;
+            }
+
+            p{
+                text-align: center;
+
+            }
+
+            button{
+                background-color: red;
+                color: white;
+                padding: 5px 20px;
+            }
+        </style>
+        <script>
+            var item = ["Samsung", "Apple", "Volvo", "Mercedes", "Bmw", "Jaguar", "Tata", "Mahindra", "Hyundai", "Reliance", "Ferrari"];
+            function getitem(){
+                var alltr = "";
+                item.map((name, index)=>{
+
+                    alltr = alltr + "<div>";
+                    alltr = alltr + "<h2>" + name + "</h2>";
+                    alltr = alltr + "<p> <button onclick='delitem("+ index +")'>Delete</button> </p>";
+                    alltr = alltr + "</div>";
+                })
+                document.getElementById("itemlist").innerHTML = alltr;
+            }
+
+            function delitem(index){
+                item.splice(index, 1);
+                getitem(); // to reload the list after delete
+            }
+
+            function save(){
+                var itemname = document.getElementById("newitem").value;
+                item.push(itemname); // to add new element at end of array
+                getitem(); // reload the list after adding the item
+                document.getElementById("newitem").value="";
+            }
+        </script>
+    </head>
+    <body onload="getitem()">
+        <h1 align="center">
+            <u>Company</u>
+        </h1>
+        <p align="center">
+            Enter Company Name : <input type="text" id="newitem"/>
+            <button onclick="save()">Save</button>
+        </p>
+        
+            <section id="itemlist">
+                     No Records....
+            </section>
+    </body>
+</html>

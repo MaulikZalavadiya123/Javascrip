@@ -1,0 +1,51 @@
+{
+  "userlist": [
+    {
+      "id": 1,
+      "name": "Ganesh"
+    },
+    {
+      "id": 2,
+      "name": "Mahesh"
+    },
+    {
+      "id": 3,
+      "name": "Mohit"
+    }
+  ],
+  "citylist": [
+    {
+      "id": 1,
+      "cityname": "Bangalore"
+    },
+    {
+      "id": 2,
+      "cityname": "Mangalore"
+    },
+    {
+      "id": 3,
+      "cityname": "Surat"
+    },
+    {
+      "id": 4,
+      "cityname": "Gujarat"
+    }
+  ],
+  "productlist": [
+    {
+      "id": 1,
+      "pname": "Apple",
+      "price": 300
+    },
+    {
+      "id": 2,
+      "pname": "Mango",
+      "price": 100
+    },
+    {
+      "id": 3,
+      "pname": "Orange",
+      "price": 80
+    }
+  ]
+}

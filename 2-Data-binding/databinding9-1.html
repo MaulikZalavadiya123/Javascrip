@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            section{
+                display: grid;
+                width: 80%;
+                margin: auto;
+                grid-template-columns: auto auto auto;
+            }
+        </style>
+        <script>
+            var item = ["Apple", "Mango", "Banana", "Orange", "Laptop", "Desktop"];
+            function getitem(){
+                var alltr = "";
+                item.map((name, index)=>{
+
+                    alltr = alltr + "<div>";
+                    alltr = alltr + "<p>" + name + "</p>";
+                    alltr = alltr + "<p> <button onclick='delitem("+ index +")'>Delete</button> </p>";
+                    alltr = alltr + "</div>";
+                })
+                document.getElementById("itemlist").innerHTML = alltr;
+            }
+
+            function delitem(index){
+                item.splice(index, 1);
+                getitem(); // to reload the list after delete
+            }
+
+            function save(){
+                var itemname = document.getElementById("newitem").value;
+                item.push(itemname); // to add new element at end of array
+                getitem(); // reload the list after adding the item
+                document.getElementById("newitem").value="";
+            }
+        </script>
+    </head>
+    <body onload="getitem()">
+        <h1 align="center">
+            Array. add, List, Delete Example
+        </h1>
+        <p align="center">
+            Enter Item Name : <input type="text" id="newitem"/>
+            <button onclick="save()">Save</button>
+        </p>
+        
+            <section id="itemlist">
+                     No Records....
+            </section>
+    </body>
+</html>

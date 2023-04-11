@@ -1,0 +1,20 @@
+{
+    "booklist": [
+      {
+        "id": 1,
+        "name": "Bhagavad Gita"
+      },
+      {
+        "id": 2,
+        "name": "Ramayana"
+      },
+      {
+        "id": 3,
+        "name": "Garud Puran"
+      },
+      {
+        "id": 4,
+        "name": "Vachanamrut"
+      }
+    ]
+  }
